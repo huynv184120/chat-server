@@ -20,7 +20,7 @@ const configCors = {
 
 const configCorsSocket = {
     cors: {
-      origin: "*",
+      origin: "https://chat-client-itss.herokuapp.com",
       credentials:true,
       allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'Origin', 'Cookies']    
     }
@@ -60,6 +60,8 @@ io.on("connect", (socket) => {
     socketController.messageChange(io, socket);
 })
 
-server.listen(process.env.PORT ||5000);
+server.listen(process.env.PORT ||5000, () => {
+
+});
 
 
