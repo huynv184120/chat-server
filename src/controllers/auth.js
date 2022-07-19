@@ -19,7 +19,7 @@ const login = async (req, res) => {
                 {expiresIn:"1d"});
                 res.cookie("token",`Bearer ${accessToken}`);
                 res.cookie("user_id",user._id);
-                res.status(200).json({message : "success"});
+                res.status(200).json({message : "success", "token": `Bearer ${accessToken}`, "user_id":user._id});
             }else{
                 res.status(200).json({message : "email or password is incorrect"});
             }
