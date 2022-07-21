@@ -12,7 +12,7 @@ const socketEvent = require("./src/socket/events");
 dotenv.config();
 
 const configCors = {
-    origin: 'https://chat-client-itss.herokuapp.com',
+    origin: ['https://chat-client-itss.herokuapp.com', 'https://matching-app-itss.herokuapp.com'],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials:true,
     optionsSuccessStatus: 204
@@ -20,7 +20,7 @@ const configCors = {
 
 const configCorsSocket = {
     cors: {
-      origin: 'https://chat-client-itss.herokuapp.com',
+      origin: ['https://chat-client-itss.herokuapp.com', 'https://matching-app-itss.herokuapp.com'],
       credentials:true,
       allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'Origin', 'Cookies']    
     }
